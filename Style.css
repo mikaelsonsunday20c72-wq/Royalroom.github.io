@@ -1,13 +1,16 @@
-RoyalRoom Website Project Structure with .gitignore:
+RoyalRoom Jekyll-Ready Project Structure:
 
 ```
 royalroom-website/
-├── index.html            # Main website page
-├── style.css             # CSS file containing all styles
-├── README.md             # Project documentation
-├── LICENSE.md            # MIT License for the project
-├── .gitignore            # Git ignore file
-├── images/               # Folder containing all menu and website images
+├── _config.yml          # Jekyll configuration file
+├── _layouts/
+│   └── default.html     # Main layout wrapping content
+├── index.md             # Home page content (converted to Markdown for Jekyll)
+├── style.css            # CSS file containing all styles
+├── README.md            # Project documentation
+├── LICENSE.md           # MIT License for the project
+├── .gitignore           # Git ignore file
+├── images/              # Folder containing all menu and website images
 │   ├── jollof_combo.jpg
 │   ├── royal_chicken_bucket.jpg
 │   ├── spaghetti_royale.jpg
@@ -29,40 +32,76 @@ royalroom-website/
 │   ├── yam_egg.jpg
 │   ├── akara_pap.jpg
 │   └── french_toast.jpg
-└── videos/               # Optional folder for embedded video files if self-hosted
+└── videos/              # Optional folder for embedded video files if self-hosted
 ```
 
-**.gitignore contents:**
+**_config.yml:**
+```yaml
+# Site settings
+title: "RoyalRoom"
+description: "Home-Cooked Lagos Meals with Restaurant Quality"
+url: "https://yourdomain.com" # Replace with your domain or GitHub Pages URL
+baseurl: ""
+author: "RoyalRoom"
+
+# Build settings
+markdown: kramdown
+theme: minima
+plugins: []
+
+# Exclude unnecessary files from the build
+exclude:
+  - README.md
+  - LICENSE.md
+  - .gitignore
+  - node_modules/
+
+# Include static files/folders
+include:
+  - images
+  - style.css
+  - videos
+
+# Defaults
+permalink: pretty
 ```
-# Node modules
-node_modules/
 
-# OS generated files
-.DS_Store
-Thumbs.db
+**index.md:**
+```markdown
+---
+layout: default
+title: Home
+---
 
-# Logs
-*.log
+Welcome to **RoyalRoom**, your home-kitchen restaurant delivering fresh, affordable, and delicious meals straight to your doorstep.
 
-# Environment files
-.env
+[Order Now](https://wa.me/2349163387678)
+```
 
-# IDE files
-.vscode/
-.idea/
+**_layouts/default.html:**
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }} | {{ site.title }}</title>
+  <link rel="stylesheet" href="{{ '/style.css' | relative_url }}">
+</head>
+<body>
+  <header>
+    <h1>{{ site.title }}</h1>
+    <p>{{ site.description }}</p>
+  </header>
 
-# Compiled files
-*.class
-*.pyc
+  <main>
+    {{ content }}
+  </main>
 
-# Cache or build folders
-dist/
-build/
-
-# Temporary files
-*.tmp
-*.swp
-
-# Ignore API keys or sensitive info
-*.key
+  <footer>
+    <p>{{ site.title }} Lagos — Fresh • Affordable • Delicious</p>
+    <p>Contact: 09163387678 | No 8 Strides Tower Avenue, Lafiaji, Coastal Road, Off Orchid Road, Lekki, Lagos</p>
+  </footer>
+</body>
+</html>
 ```
