@@ -1,0 +1,30 @@
+# Site settings
+title: "RoyalRoom"
+description: "Home-Cooked Lagos Meals with Restaurant Quality"
+url: "https://yourdomain.com" # Replace with your domain or GitHub Pages URL
+baseurl: "" # Leave empty unless deploying to a subdirectory
+author: "RoyalRoom"
+
+# Build settings
+markdown: kramdown
+theme: minima
+plugins: []
+
+# Exclude unnecessary files from the build
+exclude:
+  - README.md
+  - LICENSE.md
+  - .gitignore
+  - node_modules/
+  - videos/
+  - images/
+  - style.css
+
+# Include static files/folders if needed
+include:
+  - images
+  - style.css
+  - videos
+
+# Defaults
+permalink: pretty
