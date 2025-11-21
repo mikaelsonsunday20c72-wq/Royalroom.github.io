@@ -1,30 +1,32 @@
-# Site settings
 title: "RoyalRoom"
-description: "Home-Cooked Lagos Meals with Restaurant Quality"
-url: "https://yourdomain.com" # Replace with your domain or GitHub Pages URL
-baseurl: "" # Leave empty unless deploying to a subdirectory
-author: "RoyalRoom"
+description: "Home-Cooked Luxury Meals Delivered Fresh in Lekki"
+baseurl: ""
+url: "https://YOUR_GITHUB_USERNAME.github.io"
 
-# Build settings
+theme: null
+
 markdown: kramdown
-theme: minima
-plugins: []
 
-# Exclude unnecessary files from the build
-exclude:
-  - README.md
-  - LICENSE.md
-  - .gitignore
-  - node_modules/
-  - videos/
-  - images/
-  - style.css
+sass:
+  style: compressed
 
-# Include static files/folders if needed
-include:
-  - images
-  - style.css
-  - videos
+plugins:
+  - jekyll-sitemap
+  - jekyll-feed
 
-# Defaults
-permalink: pretty
+collections:
+  posts:
+    output: true
+
+# Navigation Menu
+nav:
+  - name: "Home"
+    link: "/"
+  - name: "Menu"
+    link: "/menu.html"
+  - name: "Categories"
+    link: "/categories.html"
+  - name: "About"
+    link: "/about.html"
+  - name: "Contact"
+    link: "/contact.html"
