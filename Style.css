@@ -1,1 +1,68 @@
-style
+RoyalRoom Website Project Structure with .gitignore:
+
+```
+royalroom-website/
+├── index.html            # Main website page
+├── style.css             # CSS file containing all styles
+├── README.md             # Project documentation
+├── LICENSE.md            # MIT License for the project
+├── .gitignore            # Git ignore file
+├── images/               # Folder containing all menu and website images
+│   ├── jollof_combo.jpg
+│   ├── royal_chicken_bucket.jpg
+│   ├── spaghetti_royale.jpg
+│   ├── jollof_rice.jpg
+│   ├── fried_rice.jpg
+│   ├── coconut_rice.jpg
+│   ├── spaghetti_jollof.jpg
+│   ├── stirfry_rice.jpg
+│   ├── egusi.jpg
+│   ├── efo_riro.jpg
+│   ├── okrasoup.jpg
+│   ├── afang_soup.jpg
+│   ├── ogbono_soup.jpg
+│   ├── puffpuff.jpg
+│   ├── shawarma.jpg
+│   ├── plantain_chips.jpg
+│   ├── meatpie.jpg
+│   ├── samosa.jpg
+│   ├── yam_egg.jpg
+│   ├── akara_pap.jpg
+│   └── french_toast.jpg
+└── videos/               # Optional folder for embedded video files if self-hosted
+```
+
+**.gitignore contents:**
+```
+# Node modules
+node_modules/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Environment files
+.env
+
+# IDE files
+.vscode/
+.idea/
+
+# Compiled files
+*.class
+*.pyc
+
+# Cache or build folders
+dist/
+build/
+
+# Temporary files
+*.tmp
+*.swp
+
+# Ignore API keys or sensitive info
+*.key
+```
