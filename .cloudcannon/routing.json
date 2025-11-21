@@ -1,0 +1,9 @@
+{
+  "collections": {},
+  "routes": [
+    {
+      "path": "/",
+      "template": "index.html"
+    }
+  ]
+}
