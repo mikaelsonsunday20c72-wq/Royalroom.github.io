@@ -1,0 +1,31 @@
+# Node modules (if any node tools are used)
+node_modules/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Environment files
+.env
+
+# IDE files
+.vscode/
+.idea/
+
+# Compiled files (if any)
+*.class
+*.pyc
+
+# Cache or build folders
+dist/
+build/
+
+# Temporary files
+*.tmp
+*.swp
+
+# Ignore API keys or sensitive info
+*.key
